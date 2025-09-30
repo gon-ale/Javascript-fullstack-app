@@ -37,10 +37,8 @@ cd Javascript-fullstack-app
 
 ### 2. Levantar la base de datos con Docker
 
-Dentro de la carpeta backend/ ya tienes un docker-compose.yml configurado:
 ```bash
-cd backend
-docker-compose up -d
+docker run --name postgres-db -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=mydb -p 5432:5432 -d postgres:16
 ```
 
 👉 Esto levantará un contenedor con PostgreSQL en localhost:5432.
@@ -53,9 +51,9 @@ docker-compose up -d
 ##### Config DB
 `DB_HOST`=localhost
 `DB_PORT`=5432
-`DB_USER`=postgres
-`DB_PASS`=postgres
-`DB_NAME`=fullstack_db
+`DB_USER`=admin
+`DB_PASS`=admin
+`DB_NAME`=mydb
 
 ### Frontend (frontend/.env)
 #### Puerto fijo 
@@ -84,7 +82,7 @@ API corriendo en: http://localhost:3000
 Frontend (React)
 ```bash
 cd frontend
-npm run dev
+npm run start
 ```
 
 Frontend corriendo en: http://localhost:3001
