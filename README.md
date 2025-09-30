@@ -5,7 +5,7 @@ Este proyecto es una aplicación Fullstack compuesta por:
 
 Backend: API en NestJS con Sequelize conectada a PostgreSQL.
 
-Frontend: React + Vite con Redux Toolkit para la gestión de estado.
+Frontend: React con Redux Toolkit para la gestión de estado.
 
 Base de datos: PostgreSQL levantada con Docker.
 
@@ -22,7 +22,7 @@ Git
 ## 📂 Estructura del proyecto
 ```bash
 ├── backend/        # NestJS + Sequelize + PostgreSQL
-├── frontend/       # React + Vite + Redux
+├── frontend/       # React + Redux
 └── README.md
 ```
     
